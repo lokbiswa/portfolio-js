@@ -1,6 +1,15 @@
+:root {
+  --dark: #36304b;
+  --light: #ffffff;
+  --highlight: #14e3be;
+}
 .navbar {
-  background: lightgray;
-  padding: 20px 30px;
+  background: var(--dark);
+  width: 100%;
+  padding: auto 30px;
+}
+.fix-top {
+  transition: ease-in-out 500ms;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,30 +24,38 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 20px;
+  grid-template-columns: 20px;
   justify-content: end;
   list-style: none;
+  background-color: var(--dark);
 }
 nav ul li {
   display: block;
 }
 nav ul li a {
   text-decoration: none;
-  color: #000;
+  color:var(--dark);
   padding: 5px;
 }
-nav ul li:hover {
-  background-color: gray;
+nav ul li a:hover {
+  background-color: var(--highlight);
+  color:var(--dark)
+
   color: black;
 }
 .section {
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
 }
 .active {
   text-decoration: none;
-  color: #000;
-  background-color: gray;
+  color: var(--dark) !important;
+  background-color: var(--highlight);
+}
+#home {
+  background-color: var(--dark);
+  color: var(--light);
+}
+#about {
+  background-color: var(--highlight);
 }
