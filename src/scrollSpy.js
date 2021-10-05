@@ -4,13 +4,12 @@ let navLinks = document.querySelectorAll(".nav-link");
 window.onscroll = () => {
   sections.forEach((sec) => {
     let fromTop = window.scrollY;
-    let offset = sec.offsetTop - 160;
-    let height = sec.offsetHeight;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight - 165;
     let id = sec.id;
     if (fromTop >= offset && fromTop < offset + height) {
       navLinks.forEach((link) => {
         link.classList.remove("active");
-        console.log(id);
         document
           .querySelector(`.nav-item a[href ='#${id}']`)
           .classList.add("active");
@@ -21,6 +20,7 @@ window.onscroll = () => {
 };
 function navBarPosition(id) {
   if (id === sections[1].id) {
+    console.log(id);
     const navbar = document.getElementById("navbar");
     navbar.classList.add("fix-top");
   }
