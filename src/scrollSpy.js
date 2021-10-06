@@ -21,14 +21,15 @@ window.onscroll = () => {
   });
 };
 
-function navBarPosition(id) {
-  if (id === sections[1].id) {
-    console.log(id);
-    const navbar = document.getElementById("navbar");
-    navbar.classList.add("fix-top");
-  }
-  if (id === sections[0].id) {
-    const navbar = document.getElementById("navbar");
-    navbar.classList.remove("fix-top");
-  }
-}
+// function navBarPosition(id) {
+//   if (id === sections[1].id) {
+//     console.log(id);
+//     const navbar = document.getElementById("navbar");
+//     navbar.classList.add("fix-top");
+//   }
+//   if (id === sections[0].id) {
+//     const navbar = document.getElementById("navbar");
+//     navbar.classList.remove("fix-top");
+//   }
+// }
+// navBarPosition("projects");
