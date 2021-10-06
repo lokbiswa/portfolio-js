@@ -23,7 +23,7 @@
     onload="onPageLoad()"
     data-bs-spy="scroll"
     data-bs-target="#navbar"
-    data-bs-offset="80px"
+    data-bs-offset="110"
   >
     <div class="wrapper">
       <div class="section" id="home">
@@ -31,6 +31,14 @@
           <a id="credit" href="https://unsplash.com/@weirick"
             >photo by @weirick</a
           >
+          <div class="social-links">
+            <a id="linkedin" href="#" class="social-link" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a id="github" href="#" class="social-link" target="_blank">
+              <i class="fab fa-github-square"></i>
+            </a>
+          </div>
           <img
             class="m-auto"
             id="profile-img"
@@ -67,7 +75,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="narbar-nav m-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a href="#home" class="nav-link active">Home</a>
               </li>
@@ -87,8 +95,8 @@
       <div class="section" id="projects">
         <h1 class="section-title mb-5 pb-2">Projects</h1>
         <div class="container mb-5">
-          <div class="row">
-            <div
+          <div class="row projects-row">
+            <!-- <div
               class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
             >
               <div class="project">
@@ -153,7 +161,7 @@
                   alt=""
                 />
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -244,6 +252,9 @@
         </form>
       </div>
       <div class="foter">
+        <a title="to top" href="#home" class="to-top"
+          ><i class="fas fa-chevron-up"></i> <span class="to-top-text"></span
+        ></a>
         <p class="copy-write text-center">Lok Shankar ©2021</p>
       </div>
     </div>

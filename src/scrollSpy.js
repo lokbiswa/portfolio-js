@@ -17,7 +17,7 @@ window.onscroll = () => {
         // });
         navBarPosition(id);
       }
-    }, 1000);
+    }, 100);
   });
 };
 
