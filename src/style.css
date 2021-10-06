@@ -20,7 +20,7 @@
   z-index: 1000;
 }
 .fix-top {
-  transition: ease-in-out 500ms;
+  transition: ease-in-out 700ms;
   position: fixed;
   top: 0;
   left: 0;
@@ -106,7 +106,7 @@ nav ul li a:hover {
   margin-left: 10px;
   transition: ease-in-out 300ms;
 }
-.view-detail :hover > .fa {
+.view-detail:hover > .fa {
   transform: rotate(90deg);
 }
 #name {
@@ -117,6 +117,9 @@ nav ul li a:hover {
 @media screen and (max-width: 900px) {
   #name {
     display: block;
+  }
+  #projects .container {
+    padding: 0 !important;
   }
 }
 @media screen and (max-width: 760px) {
@@ -147,7 +150,6 @@ nav ul li a:hover {
   position: absolute;
   right: 50%;
   transform: translateX(50%);
-
   animation: ease-in bounce 3000ms infinite;
 }
 .fa-chevron-down {
@@ -186,9 +188,6 @@ nav ul li a:hover {
   background-color: var(--highlight);
 }
 #projects {
-  padding-top: 15rem;
-  position: sticky;
-  top: 0;
   z-index: -1;
 }
 .row div {
@@ -200,6 +199,28 @@ nav ul li a:hover {
 .project img {
   margin: auto;
   width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .profile-img {
+    width: 10rem;
+    height: 10rem;
+  }
+  p {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .section {
+    padding: 0;
+  }
+  #projects .container {
+    padding: 0 !important;
+    margin: 0;
+  }
 }
 #about {
   background-color: var(--about-bg);
@@ -223,14 +244,28 @@ nav ul li a:hover {
   background-color: transparent;
   margin: var(--section-margin);
   padding: 5px;
-  min-width: 200px;
   text-align: center;
   margin: 5px;
 }
 
-#about .card img {
-  width: 70px;
+#about .card .tech-icon {
+  font-size: 48px;
+  height: 0;
+  width: 90px;
+  padding-bottom: 75px;
+  background-color: var(--highlight);
+  color: var(--about-bg);
   margin: auto;
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(
+    0% 50%,
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%
+  );
+  -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
 }
 #about .card-title {
   padding: 0;

@@ -35,7 +35,7 @@
           <div class="heading-text">
             <h1 id="intro">
               Hello there, I am <span id="name">Lok Shankar</span>
-             <h3>Frontend developer in Kansas City</h3
+              <h3>Frontend developer in Kansas City</h3>
             </h1>
             <a href="#projects" class="view-detail btn d-none d-sm-block"
               >VIEW MY WORK
@@ -72,13 +72,16 @@
               <li class="nav-item">
                 <a href="#about" class="nav-link">About Me</a>
               </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Say Hello</a>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div class="section mt-5 pt-3 push-down" id="projects">
-        <h1 class="section-title">Projects</h1>
-        <div class="container p-5">
+      <div class="section mt-5 pt-3" id="projects">
+        <h1 class="section-title mb-5 pb-2">Projects</h1>
+        <div class="container mb-5">
           <div class="row">
             <div
               class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
@@ -149,96 +152,98 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="section push-down" id="about">
-      <div class="container intro">
-        <h1 class="section-title">About Me</h1>
-        <p class="intro-text text-center">
-          I am a fullstack developer in Kansas City, KS. I have a greate passion
-          for software developement
-        </p>
+      <div class="section pb-5" id="about">
+        <div class="container intro">
+          <h1 class="section-title">About Me</h1>
+          <p class="intro-text text-center">
+            I am a fullstack developer in Kansas City, KS. I have a greate
+            passion for software developement
+          </p>
+        </div>
+        <h3 class="worked-with mb-4">I have worked with</h3>
+        <div class="container row">
+          <div class="col">
+            <div class="card">
+              <div class="tech-icon"><i class="fab fa-html5"></i></div>
+              <h6 class="card-title">HTML5</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+              <h6 class="card-title">CSS3</h6>
+            </div>
+            <p class="card-text"></p>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="tech-icon"><i class="fab fa-js-square"></i></div>
+              <h6 class="card-title">JavaScript</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="tech-icon"><i class="fab fa-react"></i></div>
+              <h6 class="card-title">React.js</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="tech-icon"><i class="fab fa-node-js"></i></div>
+              <h6 class="card-title">Node.js</h6>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <div class="tech-icon"><i class="fas fa-database"></i></div>
+              <h6 class="card-title">MongoDB</h6>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container row">
-        <div class="col">
-          <div class="card">
-            <img class="card-img" src="asset/responsive.png" alt="" />
-            <h6 class="card-title">HTML5</h6>
+      <div class="section p-5" id="contact">
+        <form class="container contact-form">
+          <h1 class="section-title text-center mb-4">Contact</h1>
+          <div class="name-email d-flex">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control d-block"
+              placeholder="John Smith"
+            />
+            <label for="email" lass="form-label">Email</label>
+            <input
+              class="form-control d-block"
+              type="email"
+              id="email"
+              placeholder="email@example.com"
+            />
           </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img" src="asset/responsive.png" alt="" />
-            <h6 class="card-title">CSS3</h6>
-          </div>
-          <p class="card-text"></p>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img" src="asset/responsive.png" alt="" />
-            <h6 class="card-title">JavaScript</h6>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img" src="asset/responsive.png" alt="" />
-            <h6 class="card-title">React.js</h6>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img" src="asset/responsive.png" alt="" />
-            <h6 class="card-title">Node.js</h6>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img class="card-img" src="asset/responsive.png" alt="" />
-            <h6 class="card-title">MongoDB</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section" id="contact"
-      <form class="container contact-form">
-        <h1 class="section-title text-center mb-4">Contact</h1>
-        <div class="name-email d-flex">
-          <label for="name"class= "form-label">Name</label>
-          <input
-            type="text"
-            id="name"
-            class="form-control d-block"
-            placeholder="John Smith"
-          />
-          <label for="email" lass = "form-label">Email</label>
-          <input
-            class="form-control d-block"
-            type="email"
-            id="email"
-            placeholder="email@example.com"
-          />
-        </div>
-        <label for="message" class="form-label">Message</label>
-        <textarea
-          class="form-control" 
-          name="message"
-          id="message"
-          cols="30"
-          rows="10"
-          placeholder="Your message here"
-        ></textarea>
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            class="form-control"
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your message here"
+          ></textarea>
           <button
             class="btn d-block mt-5 m-auto"
             type="submit"
             id="send-message"
-          >Send Message <i class="far fa-paper-plane"></i></button>
-        </div>
-      </form>
-    </div>
-    <div class="foter">
-      <p class="copy-write text-center">Lok Shankar ©2021</p>
+          >
+            Send Message <i class="far fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+      <div class="foter">
+        <p class="copy-write text-center">Lok Shankar ©2021</p>
+      </div>
     </div>
     <script src="main.js"></script>
-    <script src="scrollSpy.js"></script>
+    <script src="./scrollSpy.js"></script>
     <script src="background-circles.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
