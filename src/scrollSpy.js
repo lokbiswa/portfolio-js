@@ -9,12 +9,12 @@ window.onscroll = () => {
       let height = sec.offsetHeight - 165;
       let id = sec.id;
       if (fromTop >= offset && fromTop < offset + height) {
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          document
-            .querySelector(`.nav-item a[href ='#${id}']`)
-            .classList.add("active");
-        });
+        // navLinks.forEach((link) => {
+        //   link.classList.remove("active");
+        //   document
+        //     .querySelector(`.nav-item a[href ='#${id}']`)
+        //     .classList.add("active");
+        // });
         navBarPosition(id);
       }
     }, 1000);

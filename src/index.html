@@ -19,7 +19,12 @@
     <link rel="stylesheet" href="style.css" />
     <title>Lok</title>
   </head>
-  <body onload="onPageLoad()">
+  <body
+    onload="onPageLoad()"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar"
+    data-bs-offset="80px"
+  >
     <div class="wrapper">
       <div class="section" id="home">
         <div class="heading">
@@ -62,7 +67,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="narbar-nav m-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a href="#home" class="nav-link active">Home</a>
               </li>
@@ -79,7 +84,7 @@
           </div>
         </div>
       </nav>
-      <div class="section mt-5 pt-3" id="projects">
+      <div class="section" id="projects">
         <h1 class="section-title mb-5 pb-2">Projects</h1>
         <div class="container mb-5">
           <div class="row">

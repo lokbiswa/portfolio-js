@@ -7,6 +7,9 @@
   --input-dark: #332b4b;
   --section-margin: 20px;
 }
+.wrapper {
+  position: realtive;
+}
 #credit {
   position: absolute;
   top: 2rem;
@@ -45,7 +48,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: var(--dark);
+  color: var(--light) !important;
   padding: 5px;
 }
 nav ul li a:hover {
