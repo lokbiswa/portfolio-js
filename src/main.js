@@ -3,10 +3,15 @@ const lastname = "Shankar";
 const summary =
   "I am a fullstack developer in Kansas City, KS. I have a greate passion for software developement";
 
-const linkedin = "www.linkedin.com/in/lok-shankar";
-const GitHub = "https://github.com/lokbiswa";
+const linkedinLink = "https://www.linkedin.com/in/lok-shankar";
+const githubLink = "https://github.com/lokbiswa";
 
-function onPageLoad() {}
+function onPageLoad() {
+  const linked = document.getElementById("linkedin");
+  const github = document.getElementById("github");
+  linked.href = linkedinLink;
+  github.href = githubLink;
+}
 
 // utility funtions
 function getElementAssignInnerHTML(id, innerHtml) {
