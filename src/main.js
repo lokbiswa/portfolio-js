@@ -49,6 +49,7 @@ function eachProject(object) {
   projectName = document.createElement("h4");
   projectName.className = "project-names";
   projectName.innerHTML = object.name;
+  const links = document.createElement("a");
   const hostedLink = document.createElement("a");
   hostedLink.className = "liveDemo";
   hostedLink.href = object.link;
@@ -78,7 +79,7 @@ function onPageLoad() {
 // utility funtions
 function nestElements(...elements) {
   elements.reduce((a, b) => {
-    console.log(a);
+    // console.log(a);
     a.appendChild(b);
     return a;
   });
@@ -86,10 +87,12 @@ function nestElements(...elements) {
 function getElementAssignInnerHTML(id, innerHtml) {
   document.getElementById(id).innerHTML = innerHtml;
 }
+
 // to collapes the navbar.
 const menuToggle = document.getElementById("navbarSupportedContent");
-const bsCollapse = new bootstrap.Collapse(menuToggle);
-navLinks.forEach((link) => {
+const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+navMenu = document.querySelectorAll(".navlink");
+navMenu.forEach((link) => {
   link.addEventListener("click", () => {
     bsCollapse.toggle();
   });
