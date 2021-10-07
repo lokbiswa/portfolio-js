@@ -9,15 +9,9 @@
 }
 .wrapper {
   scroll-behavior: smooth;
-  /* height: 100vh; */
-  overflow-y: scroll;
+  overflow-y: scroll; /* for bootstrap scrollSpy*/
 }
-#credit {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: #ffffffc4;
-}
+
 /* navbar styling */
 .navbar {
   background: var(--dark);
@@ -32,6 +26,11 @@
   top: 0;
   left: 0;
   right: 0;
+}
+.fix-top .container {
+  padding: 0 10px;
+  width: 100%;
+  margin: 0;
 }
 
 nav {

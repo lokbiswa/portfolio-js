@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+    <!-- fontawesome cdn -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -26,11 +28,9 @@
     data-bs-offset="110"
   >
     <div class="wrapper">
+      <!-- home section -->
       <div class="section" id="home">
         <div class="heading">
-          <a id="credit" href="https://unsplash.com/@weirick"
-            >photo by @weirick</a
-          >
           <div class="social-links">
             <a id="linkedin" href="#" class="social-link" target="_blank">
               <i class="fab fa-linkedin"></i>
@@ -60,9 +60,13 @@
           </div>
         </div>
       </div>
-      <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fix-top">
+      <!-- navigation -->
+      <nav
+        id="navbar"
+        class="navbar navbar-expand-lg navbar-dark navbar-inverse"
+      >
         <div class="container">
-          <a class="navbar-brand">Lok Shankar</a>
+          <a href="#home" class="navbar-brand">Lok Shankar</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -92,79 +96,16 @@
           </div>
         </div>
       </nav>
+      <!-- projects section -->
       <div class="section" id="projects">
         <h1 class="section-title mb-5 pb-2">Projects</h1>
         <div class="container mb-5">
           <div class="row projects-row">
-            <!-- <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
-            >
-              <div class="project">
-                <img
-                  class="img-fluid"
-                  src="https://picsum.photos/600/600"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
-            >
-              <div class="project">
-                <img
-                  class="img-fluid"
-                  src="https://picsum.photos/600/600"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
-            >
-              <div class="project">
-                <img
-                  class="img-fluid"
-                  src="https://picsum.photos/600/600"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
-            >
-              <div class="project">
-                <img
-                  class="img-fluid"
-                  src="https://picsum.photos/600/600"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
-            >
-              <div class="project">
-                <img
-                  class="img-fluid"
-                  src="https://picsum.photos/600/600"
-                  alt=""
-                />
-              </div>
-            </div>
-            <div
-              class="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center"
-            >
-              <div class="project">
-                <img
-                  class="img-fluid"
-                  src="https://picsum.photos/600/600"
-                  alt=""
-                />
-              </div>
-            </div> -->
+            <!-- projects here -->
           </div>
         </div>
       </div>
+      <!-- technologies -->
       <div class="section pb-5" id="about">
         <div class="container intro">
           <h1 class="section-title">About Me</h1>
@@ -214,7 +155,9 @@
           </div>
         </div>
       </div>
+      <!-- Contact section -->
       <div class="section p-5" id="contact">
+        <!-- contact form -->
         <form class="container contact-form">
           <h1 class="section-title text-center mb-4">Contact</h1>
           <div class="name-email d-flex">
@@ -251,6 +194,7 @@
           </button>
         </form>
       </div>
+      <!-- footer -->
       <div class="foter">
         <a title="to top" href="#home" class="to-top"
           ><i class="fas fa-chevron-up"></i> <span class="to-top-text"></span
@@ -258,13 +202,14 @@
         <p class="copy-write text-center">Lok Shankar ©2021</p>
       </div>
     </div>
-    <script src="main.js"></script>
+    <!-- for navbar to page top -->
     <script src="./scrollSpy.js"></script>
-    <script src="background-circles.js"></script>
+    <!-- bootstrap cdn -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
