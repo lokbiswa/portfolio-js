@@ -6,3 +6,32 @@ let observer = new IntersectionObserver((entries) => {
 });
 
 observer.observe(document.querySelector("#home"));
+
+// smooth scrolling
+links = document.querySelectorAll("a");
+
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    smoothScroll(link);
+  });
+});
+
+function smoothScroll(link) {
+  console.log(link);
+  const targetID = link.getAttribute("href");
+  const targetPosition = document.querySelector(targetID).offsetTop;
+  const currentPosition = window.pageYOffset;
+  const offset = 40;
+  const distance = targetPosition - currentPosition - offset;
+  const duration = 100;
+  let start = null;
+  window.requestAnimationFrame(eachFrame);
+
+  function eachFrame(timestamp) {
+    start = start || timestamp;
+    const progress = timestamp - start;
+    window.scrollTo(0, distance * (progress / duration) + currentPosition);
+    if (progress < duration) window.requestAnimationFrame(eachFrame);
+  }
+}

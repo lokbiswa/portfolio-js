@@ -10,24 +10,28 @@ const githubLink = "https://github.com/lokbiswa";
 const projects = [
   {
     title: "Fun House Pizza",
+    description: "This is a site for a local business.",
     link: "https://lokbiswa.github.io/funHousePizza/",
     github: "https://github.com/lokbiswa/funHousePizza",
     thumbnail: "./asset/funhousepizza.png",
   },
   {
-    title: "AMT Mock-up",
+    title: "Atm Simulator",
+    description: "Practicing JavaScript and the Data Structures",
     link: "https://lokbiswa.github.io/atm-UsingObject/",
-    github: "",
+    github: "https://github.com/lokbiswa/atm-UsingObject",
     thumbnail: "./asset/atm.png",
   },
   {
     title: "TODO LIST",
+    description: "Todo List web app that uses local storage to store data.",
     link: "https://lokbiswa.github.io/project-5/",
-    github: "",
+    github: "https://github.com/lokbiswa/project-5/tree/main/src",
     thumbnail: "./asset/todo.png",
   },
   {
     title: "FlawNalysis",
+    description: "Ticketing system for office related issue",
     link: "https://flawnalysis.herokuapp.com/",
     github: "https://github.com/lokbiswa/FlawNalysis",
     thumbnail: "./asset/flawNalysis.png",
@@ -37,7 +41,7 @@ const projects = [
 function eachProject(object) {
   const projectsDiv = document.querySelector(".projects-row");
   const col = document.createElement("div");
-  col.className = "col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center";
+  col.className = "col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center";
   const project = document.createElement("div");
   project.className = "project";
   const projectThumbnail = document.createElement("img");
@@ -48,18 +52,25 @@ function eachProject(object) {
   projectInfo.className = "info";
   projectName = document.createElement("h4");
   projectName.className = "project-names";
-  projectName.innerHTML = object.name;
-  const links = document.createElement("a");
+  projectName.innerHTML = object.title;
+  const projectDes = document.createElement("p");
+  projectDes.innerText = object.description;
+  projectDes.className = "details";
+  const linksDiv = document.createElement("div");
+  linksDiv.className = "btn-group";
   const hostedLink = document.createElement("a");
-  hostedLink.className = "liveDemo";
+  hostedLink.className = "project-link";
   hostedLink.href = object.link;
-  const github = document.createElement("a");
-  github.className = "projectLink";
-  github.href = object.github;
-  // hidden dive appending
-  nestElements(projectInfo, projectName, hostedLink, github);
+  hostedLink.innerHTML = '<i class="fas fa-desktop"></i>';
+  const githubRepo = document.createElement("a");
+  githubRepo.className = "project-link";
+  githubRepo.href = object.github;
+  githubRepo.innerHTML = "<i class='fab fa-github-square'></i>";
+  linksDiv.appendChild(hostedLink);
+  linksDiv.appendChild(githubRepo);
+  nestElements(projectInfo, projectName, projectDes, linksDiv);
   //  appending elements
-  nestElements(project, projectThumbnail);
+  nestElements(project, projectInfo, projectThumbnail);
   nestElements(col, project);
   nestElements(projectsDiv, col);
 }
@@ -79,7 +90,7 @@ function onPageLoad() {
 // utility funtions
 function nestElements(...elements) {
   elements.reduce((a, b) => {
-    // console.log(a);
+    console.log(a);
     a.appendChild(b);
     return a;
   });
@@ -91,7 +102,7 @@ function getElementAssignInnerHTML(id, innerHtml) {
 // to collapes the navbar.
 const menuToggle = document.getElementById("navbarSupportedContent");
 const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
-navMenu = document.querySelectorAll(".navlink");
+const navMenu = document.querySelectorAll(".nav-link");
 navMenu.forEach((link) => {
   link.addEventListener("click", () => {
     bsCollapse.toggle();
