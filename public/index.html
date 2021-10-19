@@ -162,15 +162,16 @@
       <!-- Contact section -->
       <div class="section p-5" id="contact">
         <!-- contact form -->
-        <form class="container contact-form">
+        <form class="container contact-form" onsubmit="submitHandler()">
           <h1 class="section-title text-center mb-4">Contact</h1>
           <div class="name-email d-flex">
             <label for="name" class="form-label">Name</label>
             <input
               type="text"
-              id="name"
+              id="userName"
               class="form-control d-block"
               placeholder="John Smith"
+              required
             />
             <label for="email" lass="form-label">Email</label>
             <input
@@ -178,16 +179,17 @@
               type="email"
               id="email"
               placeholder="email@example.com"
+              required
             />
           </div>
           <label for="message" class="form-label">Message</label>
           <textarea
             class="form-control"
-            name="message"
             id="message"
             cols="30"
             rows="10"
             placeholder="Your message here"
+            required
           ></textarea>
           <button
             class="btn d-block mt-5 m-auto"
@@ -215,5 +217,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="main.js"></script>
+    <script src="mailer.js"></script>
   </body>
 </html>
