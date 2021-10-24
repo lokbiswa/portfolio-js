@@ -16,13 +16,13 @@ const oAuth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URL
 );
+// setting refresh token as credential
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-
+// sends mail
 async function sendMail(mailObject) {
   try {
     //   traiding refresh token for access token.
     const accessToken = await oAuth2Client.getAccessToken();
-    console.log(accessToken);
     //  transporter
     const transpot = nodemailer.createTransport({
       service: "gmail",
@@ -40,7 +40,7 @@ async function sendMail(mailObject) {
       to: "lokbiswa@gmail.com",
       subject: `message from: ${mailObject.name}`,
       //   email format
-      html: `sender informations: 
+      html: `<p>sender informations </p>: 
                 <ul>
                     <li>${mailObject.name}</li>
                     <li>${mailObject.email}</li>

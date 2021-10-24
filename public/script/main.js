@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "FlawNalysis",
-    description: "Ticketing system for office related issue",
+    description: "Fulstack Ticketing system for office related issue",
     link: "https://flawnalysis.herokuapp.com/",
     github: "https://github.com/lokbiswa/FlawNalysis",
     thumbnail: "./asset/flawNalysis.png",

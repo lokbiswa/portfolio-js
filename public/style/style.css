@@ -15,7 +15,7 @@
 .navbar {
   background: var(--dark);
   width: 100%;
-  padding: auto 30px;
+  padding: 30px;
   z-index: 8;
 }
 .fix-top {
@@ -86,7 +86,7 @@ nav ul li a:hover {
   padding: 3rem;
   gap: 20px;
 }
-.heading h1 {
+.heading h3 {
   font-size: 32px;
   font-weight: 700;
 }
@@ -131,7 +131,6 @@ nav ul li a:hover {
     margin: 0;
   }
   .navbar-nav {
-    padding: 5px;
     width: 100%;
   }
 
@@ -142,7 +141,15 @@ nav ul li a:hover {
     padding: 0 !important;
   }
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 767px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar .container-fluid {
+    padding: 0 30px;
+    width: 100%;
+    margin: 0;
+  }
   .heading {
     flex-direction: column !important;
   }
@@ -152,7 +159,6 @@ nav ul li a:hover {
   }
   #intro,
   #intro-tex,
-  h1,
   h3 {
     text-align: center;
   }
@@ -261,14 +267,15 @@ nav ul li a:hover {
 }
 .projects-row .fa-github-square {
   color: rgb(11, 22, 175);
-  font-size: 34px;
+  line-height: 30px;
+  font-size: 35px;
 }
 .btn-group {
   display: flex;
   gap: 5px;
 }
 .projects-row .fa-desktop:hover {
-  color: #d63f3f;
+  color: #ff6060;
 }
 .projects-row .fa-github-square:hover {
   color: rgb(9, 22, 214);
@@ -291,11 +298,6 @@ nav ul li a:hover {
   }
   #projects .container {
     padding: 0 !important;
-    margin: 0;
-  }
-  .navbar.container {
-    padding: 0 10px;
-    width: 100%;
     margin: 0;
   }
 }
@@ -367,6 +369,7 @@ nav ul li a:hover {
   color: var(--light);
   align-items: center;
   background-color: var(--light-dark);
+  padding-bottom: 3rem;
 }
 
 #contact form {
@@ -377,11 +380,14 @@ nav ul li a:hover {
   color: var(--light);
   border: none;
 }
+#subtitle {
+  color: var(--highlight);
+}
 .foter {
   background-color: var(--dark);
   position: relative;
   padding: 70px 0 50px 0;
-  height: 300px;
+  height: 70px;
   color: var(--light);
   margin: 0;
 }
@@ -391,7 +397,7 @@ nav ul li a:hover {
   color: var(--highlight);
   text-decoration: none;
   font-size: 30px;
-  top: -10px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
