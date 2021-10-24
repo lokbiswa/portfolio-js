@@ -1,4 +1,4 @@
-FROM nodejs:17-alpine
+FROM node:17-alpine
 
 # ENV vars
 ENV REFRESH_TOKEN = ""
