@@ -13,8 +13,8 @@ async function submitHandler() {
     message: message,
   };
   // call mailer
-  mailer(mailObject).then((data) => {
-    alert(data);
+  mailer(mailObject).then((res) => {
+    alert(res);
   });
 }
 // fetch nodemailer server
