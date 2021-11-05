@@ -1,7 +1,7 @@
 // send message using nodemailer server.
 
 // handle form submition
-let url = "/";
+let url = "https://mailer-3axrrk5k3a-uc.a.run.app/";
 async function submitHandler() {
   //user inputs
   const senderName = document.querySelector("#userName").value;
