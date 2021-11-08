@@ -2,8 +2,10 @@
 
 // handle form submition
 let url = "https://mailer-3axrrk5k3a-uc.a.run.app/";
-async function submitHandler() {
+function submitHandler() {
+  // target.preventDefault();
   //user inputs
+  console.log("sending message");
   const senderName = document.querySelector("#userName").value;
   const senderEmail = document.querySelector("#email").value;
   const message = document.querySelector("#message").value;
