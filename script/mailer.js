@@ -20,7 +20,7 @@ function submitHandler(target) {
     if (res === "success") {
       localStorage.setItem("note", "Thank you for completing the form.");
       alert("Thank you, your message is sent");
-      window.location = "https://iamlok.come/#contact";
+      window.location = "https://iamlok.com/#contact";
     }
   });
 }
