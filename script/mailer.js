@@ -10,19 +10,23 @@ function submitHandler(target) {
   const senderEmail = document.querySelector("#email").value;
   const message = document.querySelector("#message").value;
 
-  const mailObject = {
-    name: senderName,
-    email: senderEmail,
-    message: message,
-  };
-  // call mailer
-  mailer(mailObject).then((res) => {
-    if (res === "success") {
-      localStorage.setItem("note", "Thank you for completing the form.");
-      alert("Thank you, your message is sent");
-      window.location = "https://iamlok.com/#contact";
-    }
-  });
+  if (senderName && senderEmail && message) {
+    const mailObject = {
+      name: senderName,
+      email: senderEmail,
+      message: message,
+    };
+    // call mailer
+    mailer(mailObject).then((res) => {
+      if (res === "success") {
+        localStorage.setItem("note", "Thank you for completing the form.");
+        alert("Thank you, your message is sent");
+        window.location = "https://iamlok.com/#contact";
+      }
+    });
+  } else {
+    alert("please complete the form before sending");
+  }
 }
 // fetch nodemailer server
 async function mailer(object) {
