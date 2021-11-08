@@ -80,6 +80,9 @@ function renderProjects(list) {
 }
 // add content dynamically
 function onPageLoad() {
+  let note =
+    localStorage.getItem("note") || `Send me a message, let's get in touch`;
+  document.getElementById("subtitle").innerText = note;
   renderProjects(projects);
   const linked = document.getElementById("linkedin");
   const github = document.getElementById("github");

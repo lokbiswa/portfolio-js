@@ -2,13 +2,14 @@
 
 // handle form submition
 let url = "https://mailer-3axrrk5k3a-uc.a.run.app/";
-function submitHandler() {
-  // target.preventDefault();
+function submitHandler(target) {
+  target.preventDefault();
   //user inputs
   console.log("sending message");
   const senderName = document.querySelector("#userName").value;
   const senderEmail = document.querySelector("#email").value;
   const message = document.querySelector("#message").value;
+
   const mailObject = {
     name: senderName,
     email: senderEmail,
@@ -16,7 +17,10 @@ function submitHandler() {
   };
   // call mailer
   mailer(mailObject).then((res) => {
-    alert(res);
+    if (res === "success") {
+      localStorage.setItem("note", "Thank you for completing the form.");
+      alert(senderEmail);
+    }
   });
 }
 // fetch nodemailer server

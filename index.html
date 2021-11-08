@@ -169,11 +169,9 @@
       <!-- Contact section -->
       <div class="section p-2 pb-5" id="contact">
         <!-- contact form -->
-        <form class="container contact-form" onsubmit="submitHandler()">
+        <form class="container contact-form">
           <h3 class="section-title text-center mb-4">CONTACT</h3>
-          <p id="subtitle" class="text-center">
-            Send me a message, let's get in touch
-          </p>
+          <p id="subtitle" class="text-center"></p>
           <div class="name-email d-flex">
             <label for="name" class="form-label">Name</label>
             <input
@@ -203,8 +201,9 @@
           ></textarea>
           <button
             class="btn d-block mt-5 m-auto"
-            type="submit"
+            type="button"
             id="send-message"
+            onclick="submitHandler(event)"
           >
             Send Message <i class="far fa-paper-plane"></i>
           </button>
