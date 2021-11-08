@@ -19,7 +19,8 @@ function submitHandler(target) {
   mailer(mailObject).then((res) => {
     if (res === "success") {
       localStorage.setItem("note", "Thank you for completing the form.");
-      alert(senderEmail);
+      alert("Thank you, your message is sent");
+      window.location = "https://iamlok.come/#contact";
     }
   });
 }
